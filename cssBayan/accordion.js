@@ -1,6 +1,12 @@
 var acc = document.getElementsByClassName("accordion-button");
 var i;
 
+acc[1].classList.add("active");
+var panel = acc[1].nextElementSibling;
+panel.classList.add("active");
+var image = panel.querySelector(".image-transition");
+image.style.opacity = 1;
+
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
